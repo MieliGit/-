@@ -16,3 +16,4 @@ else if (number2==sqr1)
     {
     Console.WriteLine("Второе число является квадратом первого");
     }
+Console.WriteLine("Нет числа квадратного");
