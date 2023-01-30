@@ -9,19 +9,8 @@ Console.Clear();
 int n = new Random().Next(7, 1000);
 int a = 7;
 int b = 23;
-if(n%7 == 0) 
-{
-    if(n%23 == 0) 
-    {
-        Console.WriteLine($"{n} -> Yes");
-    }
-    else 
-    {
-        Console.WriteLine($"{n} -> No");
-    }
-}
-else
-{
-    Console.WriteLine($"{n} -> No");
-}
+
+if(n%7 == 0 && n%23 == 0) Console.WriteLine($"{n} -> Yes"); 
+else Console.WriteLine($"{n} -> No");
+
 
