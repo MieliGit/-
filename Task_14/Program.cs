@@ -9,6 +9,11 @@ Console.WriteLine("Введите число: ");
 double N = double.Parse(Console.ReadLine());
 double a = 1;
 double b = 1;
+if (N < 0)
+{
+    N = N*-1;
+}
+
 while(a < N)
 {
     b = Math.Pow(a ,2);
