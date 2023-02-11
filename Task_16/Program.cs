@@ -10,7 +10,7 @@ Console.WriteLine($"Колличество цифр = {SizeN(n)}");
 int SizeN(int number)
 {
     int size = 1;
-    while(number > 10)
+    while(number >= 10)
     {
         number = number/10;
         size++;
