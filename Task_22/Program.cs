@@ -45,12 +45,3 @@ int CheckCount(int[] array)
     return count;
 }
 
-
-
-
-// bool CheckNumber(int[] SomeArray,int Number)
-// {
-//     bool Check = false;
-//     for(int i = 0; i <= SomeArray.Length -1; i++) if(SomeArray[i] == Number) Check = true;
-//     return Check;
-// }
