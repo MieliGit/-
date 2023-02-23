@@ -11,7 +11,8 @@ int[,] array = getArray(rows, colunns, 0 , 10);
 int[,] sum = array;
 PrintArray(array);
 Console.WriteLine();
-PrintArray(getNewArray(array));
+getNewArrayV2(array);
+PrintArray(array);
 
 int[,] getArray( int m, int n, int minValue, int maxValue)
 {
@@ -46,24 +47,35 @@ int Input(string message)
 }
 
 
-int[,] getNewArray(int[,] inArray)
-{
-    int[,] newArray = new int[inArray.GetLength(0), inArray.GetLength(1)];
-    for(int i=0; i <inArray.GetLength(0) -1 ; i++)
-    {
-        for(int j=0; j < inArray.GetLength(1); j++)
-        {
-            if(i != 0)
-            {
-            newArray[i,j] = inArray[i,j];
-            }
-            else
-            {
-                newArray[i, j] = inArray[inArray.GetLength(0) - 1, j];
-                newArray[inArray.GetLength(0) - 1, j] = inArray[i, j];
-            }
+// int[,] getNewArray(int[,] inArray)
+// {
+//     int[,] newArray = new int[inArray.GetLength(0), inArray.GetLength(1)];
+//     for(int i=0; i <inArray.GetLength(0) -1 ; i++)
+//     {
+//         for(int j=0; j < inArray.GetLength(1); j++)
+//         {
+//             if(i != 0)
+//             {
+//             newArray[i,j] = inArray[i,j];
+//             }
+//             else
+//             {
+//                 newArray[i, j] = inArray[inArray.GetLength(0) - 1, j];
+//                 newArray[inArray.GetLength(0) - 1, j] = inArray[i, j];
+//             }
 
-        }
+//         }
+//     }
+//     return newArray;
+// }
+
+void getNewArrayV2(int[,] inArray)
+{
+    int temp;
+    for(int j=0; j < inArray.GetLength(1); j++)
+    {
+        temp = inArray [0,j];
+        inArray[0, j] = inArray[inArray.GetLength(0)-1, j];
+        inArray[inArray.GetLength(0)-1, j] = temp;
     }
-    return newArray;
 }
