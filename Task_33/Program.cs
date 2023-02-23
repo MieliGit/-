@@ -11,7 +11,6 @@ int[,] array = getArray(rows, colunns, 0 , 10);
 int[,] sum = array;
 PrintArray(array);
 Console.WriteLine();
-//Sum(sum);
 PrintArray(getNewArray(array));
 
 int[,] getArray( int m, int n, int minValue, int maxValue)
@@ -68,17 +67,3 @@ int[,] getNewArray(int[,] inArray)
     }
     return newArray;
 }
-
-
-// void Sum(int[,] inArray)
-// {
-//     int n = 0;
-//     for(int i=0; i<inArray.GetLength(0); i++)
-//     {
-//         for(int j=0; j<inArray.GetLength(1); j++)
-//         {
-//             if(i==j) n= n+ inArray[i,j];
-//         }
-//     }
-//     Console.WriteLine($"Сумма элементов главной диагонали: {n}");
-// }
